@@ -147,6 +147,24 @@ body.dark .project-card{
 .theme-toggle:hover{
     background:#16a085;
 }
+/* EMAIL — LIGHT MODE */
+.email-link{
+    color:#2c3e50;          /* dark text for light background */
+    text-decoration:none;
+    font-weight:bold;
+}
+
+.email-link:hover{
+    color:#1abc9c;
+    text-decoration:underline;
+}
+
+/* EMAIL — DARK MODE */
+body.dark .email-link{
+    color:#ffffff;          /* white for dark background */
+}
+
+
 
 /* FOOTER */
 footer{
@@ -274,7 +292,13 @@ Muslim High School – 87.5%
 <section id="contact">
 <h2>Contact</h2>
 <p>📞 7708888202</p>
-<p>📧 <a href="mailto:m2techguru@gmail.com">m2techguru@gmail.com</a></p>
+<p>
+📧 
+<a href="mailto:m2techguru@gmail.com" class="email-link">
+m2techguru@gmail.com
+</a>
+</p>
+
 <p>📍 Cuddalore, Tamil Nadu, India</p>
 </section>
 
