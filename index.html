@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,14 +16,16 @@
     transition: background 0.3s, color 0.3s;
 }
 
-/* LIGHT MODE (default) */
+html{
+    scroll-behavior:smooth;
+}
+
 body{
     line-height:1.6;
     background:#f4f6f9;
     color:#333;
 }
 
-/* DARK MODE */
 body.dark{
     background:#0f172a;
     color:#e5e7eb;
@@ -34,7 +35,7 @@ body.dark{
 header{
     background:#2c3e50;
     color:#fff;
-    padding:20px 0;
+    padding:30px 20px;
     text-align:center;
 }
 
@@ -43,7 +44,14 @@ body.dark header{
 }
 
 header h1{font-size:2.5rem;}
-header p{font-size:1.2rem;margin-top:5px;}
+header p{font-size:1.1rem;margin-top:5px;}
+
+.social-icons{margin-top:10px;}
+.social-icons a{
+    color:white;
+    margin:0 10px;
+    font-size:22px;
+}
 
 /* NAV */
 nav{
@@ -84,18 +92,7 @@ body.dark h2{
     color:#e5e7eb;
 }
 
-/* SKILLS */
-.skills ul{list-style:none;}
-.skills li{
-    background:#1abc9c;
-    color:white;
-    display:inline-block;
-    padding:8px 15px;
-    margin:5px;
-    border-radius:20px;
-}
-
-/* CARD */
+/* CARDS */
 .project-card{
     background:white;
     padding:20px;
@@ -106,7 +103,17 @@ body.dark h2{
 
 body.dark .project-card{
     background:#1e293b;
-    box-shadow:none;
+}
+
+/* SKILLS */
+.skills ul{list-style:none;}
+.skills li{
+    background:#1abc9c;
+    color:white;
+    display:inline-block;
+    padding:8px 15px;
+    margin:5px;
+    border-radius:20px;
 }
 
 /* BUTTON */
@@ -122,15 +129,22 @@ body.dark .project-card{
 
 .btn:hover{background:#16a085;}
 
-/* SOCIAL */
-.social-icons{margin-top:10px;}
-.social-icons a{
-    color:white;
-    margin:0 10px;
-    font-size:22px;
+/* EMAIL */
+.email-link{
+    color:#2c3e50;
+    text-decoration:none;
+    font-weight:bold;
 }
 
-/* DARK TOGGLE BUTTON */
+.email-link:hover{
+    color:#1abc9c;
+}
+
+body.dark .email-link{
+    color:#fff;
+}
+
+/* DARK BUTTON */
 .theme-toggle{
     position:fixed;
     top:15px;
@@ -142,30 +156,11 @@ body.dark .project-card{
     border-radius:20px;
     cursor:pointer;
     font-weight:bold;
-    z-index:999;
 }
 
 .theme-toggle:hover{
     background:#16a085;
 }
-/* EMAIL — LIGHT MODE */
-.email-link{
-    color:#2c3e50;          /* dark text for light background */
-    text-decoration:none;
-    font-weight:bold;
-}
-
-.email-link:hover{
-    color:#1abc9c;
-    text-decoration:underline;
-}
-
-/* EMAIL — DARK MODE */
-body.dark .email-link{
-    color:#ffffff;          /* white for dark background */
-}
-
-
 
 /* FOOTER */
 footer{
@@ -173,7 +168,6 @@ footer{
     color:white;
     text-align:center;
     padding:15px;
-    margin-top:20px;
 }
 
 body.dark footer{
@@ -192,7 +186,12 @@ body.dark footer{
 
 <header>
 <h1>MOHAMED MUZAMMIL M I</h1>
-<p>B.Tech – Computer Science & Business Systems | Java Developer</p>
+
+<p>Computer Science & Business Systems Student | Full Stack Developer | Java | Cybersecurity Enthusiast</p>
+
+<p style="max-width:700px;margin:10px auto;font-size:1rem;">
+Passionate about building secure, scalable web applications and exploring modern technologies like AI and cloud systems.
+</p>
 
 <div class="social-icons">
 <a href="https://www.linkedin.com/in/mohamed-muzammil-8378032aa/" target="_blank"><i class="fab fa-linkedin"></i></a>
@@ -207,6 +206,7 @@ body.dark footer{
 <nav>
 <a href="#about">About</a>
 <a href="#skills">Skills</a>
+<a href="#learning">Learning</a>
 <a href="#projects">Projects</a>
 <a href="#education">Education</a>
 <a href="#certificates">Certificates</a>
@@ -215,43 +215,54 @@ body.dark footer{
 
 <section id="about">
 <h2>About Me</h2>
+<div class="project-card">
 <p>
-Passionate Java developer with strong foundation in Data Structures and
-problem solving. Actively solving coding challenges on LeetCode and building
-real-world applications like Hospital Scan App to improve healthcare access.
+I am a Computer Science & Business Systems student with strong interest in Full Stack Development, Cybersecurity, and AI systems.
+
+I enjoy building secure applications and learning modern frameworks while improving my problem-solving skills.
 </p>
+</div>
 </section>
 
 <section id="skills" class="skills">
 <h2>Skills</h2>
 <ul>
-<li>Java</li>
-<li>Data Structures</li>
+<li>Java </li>
+<li>Data Structures & Algorithms</li>
+<li>React.js</li>
 <li>MySQL</li>
-<li>Cybersecurity Basics</li>
-<li>AI Governance & Security</li>
-<li>Communication</li>
-<li>Problem Solving</li>
-<li>Critical Thinking</li>
-<li>Teamwork</li>
-<li>Creativity</li>
+<li>Cybersecurity Fundamentals</li>
 </ul>
+</section>
+
+<!-- UPDATED LEARNING SECTION -->
+<section id="learning">
+<h2>Currently Learning</h2>
+<div class="project-card">
+<ul>
+
+<li>Cybersecurity</li>
+<li>AI Agents & LLM Applications</li>
+</ul>
+</div>
 </section>
 
 <section id="projects">
 <h2>Projects</h2>
+
+<p><strong>🚀 Featured Project</strong></p>
+
 <div class="project-card">
 <h3>🏥 Hospital Scan App</h3>
 <p>
-Healthcare app that enables secure access and management of medical scan
-reports (X-ray, MRI, CT) with improved doctor-patient communication.
+Healthcare app that enables secure access and management of medical scan reports.
 </p>
-<p><strong>Role:</strong> Team Member</p>
 </div>
 </section>
 
 <section id="education">
 <h2>Education</h2>
+
 <div class="project-card">
 <strong>B.Tech – Computer Science & Business Systems</strong><br>
 R.M.D Engineering College, Thiruvallur<br>
@@ -275,31 +286,22 @@ Muslim High School – 87.5%
 <div class="project-card">
 <h3>🛡️ AI Security & Governance Certification</h3>
 <p>Issued by Securiti Education</p>
-<a href="ai%20governance%20and%20security.pdf" target="_blank" class="btn">
-🛡️ View AI Governance Certificate
-</a>
+<a href="ai%20governance%20and%20security.pdf" class="btn">View Certificate</a>
 </div>
 
 <div class="project-card">
 <h3>☁️ Oracle Certified Foundations Associate</h3>
-<p>Issued by Oracle University — OCI 2025 Certified AI Foundations Associate</p>
-<a href="Oracle%20cert.pdf" target="_blank" class="btn">
-🎓 View Certificate
-</a>
+<p>OCI 2025 Certified AI Foundations Associate</p>
+<a href="Oracle%20cert.pdf" class="btn">View Certificate</a>
 </div>
-
 </section>
 
 <section id="contact">
 <h2>Contact</h2>
 <p>📞 7708888202</p>
 <p>
-📧 
-<a href="mailto:m2techguru@gmail.com" class="email-link">
-m2techguru@gmail.com
-</a>
+📧 <a href="mailto:m2techguru@gmail.com" class="email-link">m2techguru@gmail.com</a>
 </p>
-
 <p>📍 Cuddalore, Tamil Nadu, India</p>
 </section>
 
